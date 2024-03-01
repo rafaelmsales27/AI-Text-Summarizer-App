@@ -1,12 +1,17 @@
+a {
+  color: #1FB8C6;
+  text-decoration: none;
+}
+
 .cta-section {
   background-color: #f2f2f2;
   padding: 40px;
 }
 
 .cta-content {
-  justify-content: center;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .cta-text {
@@ -43,6 +48,7 @@
 }
 
 img {
+  margin-top: -4%;
   max-height:200px;
   max-width: auto;
 }
@@ -57,7 +63,7 @@ body {
 h1 {
   text-align: center;
   font-weight: bold;
-  color: #333;
+  color: #202D36;
   margin-bottom: 30px;
   font-size: 32px;
 }
@@ -97,7 +103,7 @@ textarea {
 
 .submit-button {
   position: relative;
-  background-color: #ef5b25;
+  background-color: #1FB8C6;
   color: #ffffff;
   font-weight: bold;
   border-radius: 4px;
@@ -114,7 +120,7 @@ textarea {
 
 .submit-button:disabled{
   position: relative;
-  background-color: #ef5b25;
+  background-color: #1FB8C6;
   color: #ffffff;
   opacity: 40%;
   font-weight: bold;

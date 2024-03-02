@@ -1,4 +1,5 @@
 const axios = require('axios');
+require('dotenv').config();
 // This is the function where the call to the API is made. Returns the summarized text as a string.
 async function summarizeText(text) {
 
@@ -17,7 +18,7 @@ async function summarizeText(text) {
     url: 'https://api-inference.huggingface.co/models/facebook/bart-large-cnn',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + process.env['ACCESS_TOKEN']
+      'Authorization': 'Bearer ' + process.env.ACCESS_TOKEN
     },
     data: data
   };

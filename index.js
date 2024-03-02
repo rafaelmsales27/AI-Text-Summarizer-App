@@ -1,5 +1,5 @@
 const express = require('express');
-const summarizeText = require('./summarize.js');
+const summarizeText = require('./functions/summarize.js');
 const app = express();
 const port = 3000;
 

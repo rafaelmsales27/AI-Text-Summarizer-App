@@ -66,5 +66,3 @@ function submitData(e) {
       console.log(error.message);
     });
 }
-
-}

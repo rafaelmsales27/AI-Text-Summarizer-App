@@ -1,10 +1,7 @@
 const express = require('express');
-const summarizeText = require('./functions/summarize.js');
+const summarizeText = require('./summarize.js');
 const app = express();
 const port = 3000;
-
-
-console.log('ACCESS_TOKEN:', process.env.ACCESS_TOKEN);
 
 // Parses JSON bodies (as sent by API clients)
 app.use(express.json());

@@ -25,6 +25,7 @@ async function summarizeText(text) {
 
   try {
     const response = await axios.request(config);
+    console.log("API responded!");
     return response.data[0].summary_text;
   }
   catch (error) {

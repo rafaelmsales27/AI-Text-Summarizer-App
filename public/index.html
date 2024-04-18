@@ -5,41 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>AI Text Summarizer App</title>
+  <title>SummarEase AI</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-    <h1>SummarEase AI</h1>
-    <div class="desc-container">
-      <p> Welcome to SummarEase AI, your go-to platform for harnessing the capabilities of Artificial Intelligence APIs
-        to generate succinct summaries from extensive texts. Whether it's an extensive article, a research paper, or any
-        text document requiring a swift summarization, this application is designed to simplify the summarization
-        process for you. </p>
+  <h1>SummarEase AI</h1>
+  <div class="desc-container">
+    <p> Welcome to SummarEase AI, your go-to platform for harnessing the capabilities of Artificial Intelligence APIs
+      to generate succinct summaries from extensive texts. Whether it's an extensive article, a research paper, or any
+      text document requiring a swift summarization, this application is designed to simplify the summarization
+      process for you. </p>
+  </div>
+  <p> Simply paste your text into the text area below and click the "Summarize" button. </p>
+  <div class="container">
+    <div class="text-box">
+      <textarea id="text_to_summarize" name="text_to_summarize"
+        placeholder="Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)"
+        maxlength="100000"></textarea>
+      <button id="submit-button" class="submit-button">
+        <span class="submit-button-text">Summarize</span>
+      </button>
     </div>
-    <p> Simply paste your text into the text area below and click the "Summarize" button. </p>
-    <div class="container">
-      <div class="text-box">
-        <textarea id="text_to_summarize" name="text_to_summarize"
-          placeholder="Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)"
-          maxlength="100000"></textarea>
-        <button id="submit-button" class="submit-button">
-          <span class="submit-button-text">Summarize</span>
-        </button>
-      </div>
-      <div class="text-box">
-        <textarea id="summary" name="summarized_text" placeholder="Summarized text will appear here"> </textarea>
-      </div>
+    <div class="text-box">
+      <textarea id="summary" name="summarized_text" placeholder="Summarized text will appear here"> </textarea>
     </div>
-    <section class="cta-section">
-      <div class="cta-content">
-        <div class="cta-text">
-          <h2>Curious how to build this app?</h2>
-          <p>Check <a href="https://academy.postman.com">Postman's Student Program.</a></p>
-        </div>
-        <img id="logo" src="images/logo.png"></img>
-      </div>
-    </section>
+  </div>
+  <section class="cta-section">
+      <img id="logo" src="images/logo.png"></img>
+      <p>Made by Rafael M Sales and Postman</p>
+  </section>
   <script src="script.js"></script>
 </body>
 

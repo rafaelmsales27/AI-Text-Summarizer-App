@@ -180,7 +180,7 @@ textarea {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: #ffffff
+    background-color: #ffffff;
   }
 }
 
@@ -192,4 +192,10 @@ textarea {
     to {
         transform: rotate(1turn);
     }
+}
+
+
+/* Dark Theme toggle */
+#hide-checkbox:checked + body {
+  background-color: #211042;
 }

@@ -7,7 +7,7 @@ const port = 3000;
 app.use(express.json());
 
 // Serves static files from the 'public' directory
-app.use(express.static('public'));
+// app.use(express.static('public')); // only for local development
 
 // Handle POST requests to the '/summarize' endpoint
 app.post('/summarize', (req, res) => {

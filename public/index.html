@@ -7,31 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SummarEase AI</title>
   <link rel="stylesheet" href="stylesheet.css">
-  <link rel="stylesheet" href="theme-toggle.css">
+  <!-- <link rel="stylesheet" href="theme-toggle.css"> -->
+  <link rel="stylesheet" href="theme-toggle2.css">
 </head>
 
-<!-- TODO toggle for translation -->
-<!-- TODO toggle for dark theme -->
-
 <body>
-  <!-- Dark Theme Toggle -->
-  <div class="wrapper-dark-theme">
-    <input type="checkbox" id="hide-checkbox">
-    <label for="hide-checkbox" class="toggle">
-      <span class="toggle-button">
-        <span class="crater crater-1"></span>
-        <span class="crater crater-2"></span>
-        <span class="crater crater-3"></span>   
-        <span class="crater crater-4"></span>
-        <span class="crater crater-5"></span>
-        <span class="crater crater-6"></span>
-        <span class="crater crater-7"></span>
-      </span>
-      <span class="star star-1"></span>
-      <span class="star star-2"></span>
-      <span class="star star-3"></span>
-      <span class="star star-4"></span>
-      <span class="star star-5"></span>
+  <!-- Define hidden checkboxes outsidethe toggle-wrapper -->
+  <input type="checkbox" id="theme-checkbox">
+  <input type="checkbox" id="translation-checkbox">
+  <div class="toggle-wrapper">
+    <!--Dark Theme Toggle -->
+    <label for="theme-checkbox" class="toggle">
+      <div class="theme-button">
+        Theme
+      </div>
+    </label>
+
+    <!--Light Theme Toggle -->
+    <label for="translation-checkbox" class="toggle">
+      <div class="translation-button">
+        Translation
+      </div>
     </label>
   </div>
 

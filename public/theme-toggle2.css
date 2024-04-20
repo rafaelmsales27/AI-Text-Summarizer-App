@@ -1,6 +1,6 @@
 #theme-checkbox,
 #translation-checkbox {
-    visibility: hidden;
+    display: none;
 }
 
 .toggle-wrapper {

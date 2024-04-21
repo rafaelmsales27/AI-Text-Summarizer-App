@@ -1,9 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --bg-color: #f5f5f5;
-  --primary-text-color: #536390;
-  --font-color: #424242;
-  --bg-color: #fff;
-  --heading-color: #292922;
+  --bg-color: #f5f5f5; /* Dummy color since it is change via JS */
+  --bg-secondary-color: #ffffff; /* Dummy color since it is change via JS */
+  --primary-font-color: #666;
+  --secondary-font-color: #333;
+  --footer-font-color: #A6A6A6;
+  --button-color: #1FB8C6;
+  --button-disabled-color: #1FB8C6;
+  --heading-color: #202D36;
+  --text-box-bg: #FFF;
 }
 
 /* * {
@@ -11,7 +21,7 @@
 } */
 
 a {
-  color: #1FB8C6;
+  color: var(--button-color);
   text-decoration: none;
 }
 
@@ -23,7 +33,7 @@ a {
 .cta-section p {
   font-size: 11px;
   font-style: italic;
-  color: #A6A6A6;
+  color: var(--footer-font-color);
 }
 
 .cta-content {
@@ -39,13 +49,13 @@ a {
 
 .cta-content h2 {
   font-size: 25px;
-  color: #333;
+  color: var(--secondary-font-color);
   margin-bottom: 10px;
 }
 
 .cta-content p {
   font-size: 16px;
-  color: #666;
+  color: var(--primary-font-color);
   padding-bottom: 10px;
 }
 
@@ -68,6 +78,7 @@ img {
 body {
   font-family: 'Open Sans', 'Roboto', sans-serif;
   background-color: var(--bg-color);
+  color: var(--primary-font-color);
   padding: 20px;
   text-align: center;
   justify-content: center;
@@ -76,7 +87,7 @@ body {
 h1 {
   text-align: center;
   font-weight: bold;
-  color: #202D36;
+  color: var(--heading-color);
   margin-bottom: 30px;
   font-size: 32px;
 }
@@ -103,7 +114,7 @@ p {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: #ffffff
+  background-color: var(--text-box-bg);
 }
 
 textarea {
@@ -116,7 +127,7 @@ textarea {
 
 .submit-button {
   position: relative;
-  background-color: #1FB8C6;
+  background-color: var(--button-color);
   color: #ffffff;
   font-weight: bold;
   border-radius: 4px;
@@ -127,13 +138,12 @@ textarea {
 }
 
 .submit-button-text {
-  color: #ffffff;
   transition: all 0.2s;
 }
 
 .submit-button:disabled{
   position: relative;
-  background-color: #1FB8C6;
+  background-color: var(--button-disabled-color);
   color: #ffffff;
   opacity: 40%;
   font-weight: bold;
@@ -196,6 +206,81 @@ textarea {
 
 
 /* Dark Theme toggle */
-#hide-checkbox:checked + body {
-  background-color: #211042;
+* {
+  transition: 0.5s;  
+}
+
+:root {
+  --toggle-height: 1.5rem;
+  --toggle-width: 4rem;
+}
+
+#theme-checkbox,
+#translation-checkbox {
+  display: none;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: solid;
+}
+
+svg {
+  width: 70%;
+  position: absolute;    
+}
+
+label {
+  border-radius: 999px;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  background-color: #f4f4f4;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05) inset;
+  cursor: pointer;
+  position: relative;
+}
+
+.circle {
+  border-radius: 99px;
+  height: calc((var(--toggle-height) - 0.15rem));
+  width: calc((var(--toggle-height) - 0.15rem));
+  background-color: var(--bg-color);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
+  -10px -10px 30px rgba(0, 0, 0, 0.05) inset;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(10%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#sun {
+  margin-top: 0%;
+  color: #FFCC33;
+  opacity: 100%;
+}
+
+#moon {
+  margin-top: -180%;
+  color: #79C1F1;
+}
+
+#theme-checkbox:checked + .toggle-wrapper label .theme-button .circle {
+  left: 100%;
+  transform: translate(-110%, -50%);
+  background: var(--bg-color);
+}
+
+#theme-checkbox:checked + .toggle-wrapper label .theme-button .circle #sun{
+  margin-top: 180%;
+  opacity: 0%;
+}
+
+#theme-checkbox:checked + .toggle-wrapper label .theme-button .circle #moon{
+  margin-top: 0%;
 }

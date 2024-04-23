@@ -67,15 +67,9 @@ function submitData(e) {
     });
 }
 
-
-
-// Dark theme logic 
+// Dark theme logic
 const themeCheckbox = document.getElementById('theme-checkbox');
 
 themeCheckbox.addEventListener('change', function() {
-  if (themeCheckbox.checked) {
-    document.documentElement.style.setProperty('--bg-color', '#211042');
-  } else {
-    document.documentElement.style.setProperty('--bg-color', '#ffffff');
-  }
+  document.body.classList.toggle('dark');
 });

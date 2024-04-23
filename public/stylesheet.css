@@ -4,59 +4,61 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg-color: #f5f5f5; /* Dummy color since it is change via JS */
-  --bg-secondary-color: #ffffff; /* Dummy color since it is change via JS */
-  --primary-font-color: #666;
-  --secondary-font-color: #333;
-  --footer-font-color: #A6A6A6;
-  --button-color: #1FB8C6;
-  --button-disabled-color: #1FB8C6;
+:root { /* Light theme default */
+  --bg-color: #cdcdcd; 
+  --bg-secondary-color: #cdcdcd; 
+  --primary-font-color: #484848;
+  --secondary-font-color: #666; 
+  --footer-font-color: #9c9c9c; 
+  --button-color: #1FB8C6; 
+  --button-disabled-color: #bcf0f4;
   --heading-color: #202D36;
-  --text-box-bg: #FFF;
+  --text-box-bg: #e0e0e0;
+  --text-area-bg: #ededed;
+}
+
+/* Dark theme styles applied on checkbox check */
+body.dark {
+  --bg-color: #212529; /* Dark background */
+  --bg-secondary-color: #181b1f; /* Slightly lighter dark gray */
+  --primary-font-color: #fff; /* White text for high contrast */
+  --secondary-font-color: #ddd; /* Light gray text for less important elements */
+  --footer-font-color: #ddd; /* Light gray text for footer */
+  --heading-color: #fff; /* White text for headings */
+  --text-box-bg: #333; /* Medium gray for text boxes */
+  --text-area-bg: #3d3d3d; /* Medium gray for text boxes */
 }
 
 /* * {
   border: 1px solid black;
 } */
 
+body {
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  background: var(--bg-color);
+  background: linear-gradient(90deg, var(--bg-color) 0%, var(--bg-secondary-color) 90%);
+  color: var(--primary-font-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
 a {
   color: var(--button-color);
   text-decoration: none;
 }
 
-.cta-section {
-  background-color: var(--bg-color);
-  padding: 40px 0 0 0;
+.footer-section {
+  /* background: var(--bg-color); */
+  padding: 2rem 0 0 0;
 }
 
-.cta-section p {
+.footer-section p {
   font-size: 11px;
   font-style: italic;
   color: var(--footer-font-color);
-}
-
-.cta-content {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-
-.cta-text {
-  flex-basis: 25%;
-  /* padding-right: 20px; */
-}
-
-.cta-content h2 {
-  font-size: 25px;
-  color: var(--secondary-font-color);
-  margin-bottom: 10px;
-}
-
-.cta-content p {
-  font-size: 16px;
-  color: var(--primary-font-color);
-  padding-bottom: 10px;
 }
 
 .desc-container {
@@ -73,15 +75,6 @@ img {
   margin-top: -45px;
   max-height:200px;
   max-width: auto;
-}
-
-body {
-  font-family: 'Open Sans', 'Roboto', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--primary-font-color);
-  padding: 20px;
-  text-align: center;
-  justify-content: center;
 }
 
 h1 {
@@ -103,12 +96,14 @@ p {
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
-  padding: 20px;
+  align-items: center;
+  margin: 0;
+  /* padding: 20px; */
 }
 
 .text-box {
   width: 400px;
+  height: 24rem;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -123,12 +118,14 @@ textarea {
   border: none;
   padding: 10px;
   margin-bottom: 10px;
+  color: var(--secondary-font-color);
+  background-color: var(--text-area-bg);
 }
 
 .submit-button {
   position: relative;
   background-color: var(--button-color);
-  color: #ffffff;
+  color: var(--secondary-font-color);
   font-weight: bold;
   border-radius: 4px;
   border: none;
@@ -139,18 +136,18 @@ textarea {
 
 .submit-button-text {
   transition: all 0.2s;
+  color: var(--primary-font-color);
 }
 
 .submit-button:disabled{
   position: relative;
   background-color: var(--button-disabled-color);
-  color: #ffffff;
+  color: var(--secondary-font-color);
   opacity: 40%;
   font-weight: bold;
   border-radius: 4px;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
   cursor: pointer;
   margin-bottom: -5px;
 }
@@ -186,11 +183,18 @@ textarea {
   }
 
   .text-box {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     padding: 20px;
     background-color: #ffffff;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    width: 75%;
+    /* center whole body somehow */
   }
 }
 
@@ -211,7 +215,7 @@ textarea {
 }
 
 :root {
-  --toggle-height: 1.5rem;
+  --toggle-height: 2rem;
   --toggle-width: 4rem;
 }
 
@@ -223,8 +227,9 @@ textarea {
 .toggle-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border: solid;
+  justify-content: space-between;
+  /* border: solid; */
+  margin: 2rem 3rem;
 }
 
 svg {
@@ -283,4 +288,17 @@ label {
 
 #theme-checkbox:checked + .toggle-wrapper label .theme-button .circle #moon{
   margin-top: 0%;
+}
+
+/* Remove 0.5s transition for these elements */
+body,
+h1,
+p,
+.desc-container p,
+.container,
+.text-box,
+textarea,
+#summary,
+.footer-section {
+  transition: none; /* Remove transitions for these elements */
 }

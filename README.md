@@ -1,8 +1,8 @@
-# AI Text Summarizer App
+# Summarease
 
 ## Overview
 
-Welcome to the AI Text Summarizer App! This project is designed for learning purposes, and it allows users to input text that they wish to summarize using AI technology. The app is built with a user-friendly interface, utilizing technologies like API Platform, Postman, Code Editor/Deployment tool, Replit, Node.js, Express, Hugging Face Inference API, HTML, CSS, and JavaScript.
+Welcome to the Summarease! This project is designed for learning purposes, and it allows users to input text that they wish to summarize using AI technology. The app is built with a user-friendly interface, utilizing technologies like API Platform, Postman, Code Editor/Deployment tool, Replit, Node.js, Express, Hugging Face Inference API, HTML, CSS, and JavaScript.
 
 ## Features
 
@@ -53,6 +53,9 @@ This project is inspired by the educational content from Postman Academy. All cr
 
 ## Disclaimer
 
-This project is solely for personal learning purposes, and any similarities with other projects are purely coincidental.
+- This project is solely for personal learning purposes
+- Summarease summaries are for informational purposes only.
+- Use at your own risk.
+- Review original source for accuracy.
 
 Happy summarizing!

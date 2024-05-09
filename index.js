@@ -10,7 +10,7 @@ app.use(express.json());
 // app.use(express.static('public')); // only for local development
 
 // Handle POST requests to the '/summarize' endpoint
-app.post('/summarize', (req, res) => {
+app.post('/functions/summarize', (req, res) => {
   // get the text_to_summarize property from the request body
   const text = req.body.text_to_summarize;
 

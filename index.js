@@ -9,7 +9,7 @@ app.use(express.json());
 // Serves static files from the 'public' directory
 // app.use(express.static('public')); // only for local development
 
-// Handle POST requests to the '/summarize' endpoint
+// Handle POST requests to the '/functions/summarize' endpoint
 app.post('/functions/summarize', (req, res) => {
   // get the text_to_summarize property from the request body
   const text = req.body.text_to_summarize;
